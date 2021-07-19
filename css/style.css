@@ -1,0 +1,20 @@
+body{padding: auto;margin: 0;
+    
+    }
+.wrapper{border-bottom: 1px solid;}
+.head{padding: 0 12%; overflow: hidden;}
+.photo{float: left;}
+.photo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 129px;
+}
+.page-heading{float: right;
+    width: 76%;
+    padding-top: 60px;}
+    .page-heading h1{float: left;}
+.footer{padding: 15px;
+    background: #ddd;}
+.container{padding: 0 12%;}
+.footer p{text-align: center;}
+.content{padding-top:20px; padding-bottom: 30px;}
