@@ -61,3 +61,12 @@ ul.movie-item {
     ul.movie-item li {
         color: #d1cccc;
     }
+    em.md{color:#f0e12b;}
+    
+      
+    span.flip_V{ display: inline-block; margin:1em; } 
+      .flip_V{ -moz-transform: scale(1, -1);
+        -webkit-transform: scale(1, -1);
+        -o-transform: scale(1, -1);
+        -ms-transform: scale(1, -1);transform: scale(1, -1); }
+        .flip_V::first-letter{font-size: 30px;}
