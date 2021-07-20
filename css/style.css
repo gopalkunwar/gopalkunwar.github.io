@@ -1,10 +1,13 @@
 body{padding: auto;margin: 0;font-family: 'Open Sans', sans-serif; }
+body.aboutme{background-color: #111;}
 .wrapper{border-bottom: 1px solid;}
 .head{padding: 0 12%; overflow: hidden;}
 .photo{float: left;}
 .photo img {width: 180px;height: 180px; border-radius: 129px;
 }
-.page-heading{float: right;width: 76%;padding-top: 60px;}
+.page-heading, .about{float: right;width: 76%;padding-top: 60px;}
+.about h1,.movies h3,.courses h3,.neighbors h3{color:#9dc2ef;}
+
     .page-heading h1{float: left;}
 
     .content ul li{padding:3px 0;}
@@ -23,3 +26,25 @@ body{padding: auto;margin: 0;font-family: 'Open Sans', sans-serif; }
         .copyright {float: left;padding: 5px;width: 85%;
         }
       }
+      .content p,.aboutme-copy p{color:#FFF;}
+      .intro {
+        border-bottom: 1px solid #767474;
+    }        .courses ul>li, .neighbors ul>li{color:#FFF;}
+    .movies ol{list-style:decimal;color:#FFF;}
+    .movies p{font-style: italic;}
+    .moods{overflow: hidden;}
+    .first{float: left; width: 50%;}
+.second{float: right;width:50%;}
+.mood-title{
+    float: left;
+    width: 20%;
+}
+.mood-title h4{color:#FFF;
+    padding-top: 215px;}
+
+    .mood-img{float: right;
+        width: 80%;}
+.mood-img img{width:84%; height: auto;}
+.marker{border-bottom: 1px solid #767474;}
+.imdb a, .imdb a:link{color:red; text-decoration: underline;}
+.imdb a:hover{color:yellow; text-decoration: underline;}
