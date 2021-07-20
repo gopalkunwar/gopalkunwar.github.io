@@ -30,7 +30,11 @@ body.aboutme{background-color: #111;}
       .intro {
         border-bottom: 1px solid #767474;
     }        .courses ul>li, .neighbors ul>li{color:#FFF;}
-    .movies ol{list-style:decimal;color:#FFF;}
+    .movies ol{list-style:decimal;color:#FFF;  display: flex;
+        flex-direction: column-reverse;}
+    .movies ol>li{padding:5px 0;}
+    .movies ol>li>dl>dt{color:yellow;}
+    .movies ol>li>dl>dt>dd{color: #767474;}
     .movies p{font-style: italic;}
     .moods{overflow: hidden;}
     .first{float: left; width: 50%;}
@@ -46,5 +50,14 @@ body.aboutme{background-color: #111;}
         width: 80%;}
 .mood-img img{width:84%; height: auto;}
 .marker{border-bottom: 1px solid #767474;}
-.imdb a, .imdb a:link{color:red; text-decoration: underline;}
+.imdb a, .imdb a:link{color:red; text-decoration: none;}
 .imdb a:hover{color:yellow; text-decoration: underline;}
+ul.movie-details{list-style: none; padding-left: 0;}
+ul.movie-details li{color:yellow;}
+
+ul.movie-item {
+    list-style: none;
+}
+    ul.movie-item li {
+        color: #d1cccc;
+    }
