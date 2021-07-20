@@ -1,4 +1,4 @@
-body{padding: auto;margin: 0;font-family: 'Open Sans', sans-serif; }
+body{padding: 0;margin: 0;font-family: 'Open Sans', sans-serif; }
 body.aboutme{background-color: #111;}
 .wrapper{border-bottom: 1px solid;}
 .head{padding: 0 12%; overflow: hidden;}
