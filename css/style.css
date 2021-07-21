@@ -65,8 +65,5 @@ ul.movie-item {
     
       
     span.flip_V{ display: inline-block; margin:1em; } 
-      .flip_V{ -moz-transform: scale(1, -1);
-        -webkit-transform: scale(1, -1);
-        -o-transform: scale(1, -1);
-        -ms-transform: scale(1, -1);transform: scale(1, -1); }
+      .flip_V{ transform: scale(1, -1); }
         .flip_V::first-letter{font-size: 30px;}
