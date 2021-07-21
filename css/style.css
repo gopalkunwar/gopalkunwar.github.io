@@ -9,14 +9,14 @@ body.aboutme{background-color: #111;}
 .about h1,.movies h3,.courses h3,.neighbors h3{color:#9dc2ef;}
 
     .page-heading h1{float: left;}
-
+     
     .content ul li{padding:3px 0;}
     .content ul li a, .content ul li a:link{text-decoration: none; font-weight: 600;}
     .content ul li a:hover{text-decoration: underline;font-weight: 600;color: red;}
 
 .container{padding: 0 12%;}
 .footer p{text-align: center;float: right;}
-.content{padding-top:20px; padding-bottom: 30px;}
+.content{padding-top:20px; padding-bottom: 30px; min-height: 350px;}
 .copyright{float: left;padding: 10px;width: 60%;}
     .w3c{float: right;padding: 10px;}
     @media only screen and (max-width: 760px) {
