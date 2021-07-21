@@ -38,3 +38,7 @@ abbr {
   .right{width: 24%; float: right;}
   .w3c p{float: right; margin-bottom: 0;line-height: 8px;}
   .copyright{float: right;}
+  .container {
+    padding-bottom: 10px;
+    overflow: hidden;
+}
