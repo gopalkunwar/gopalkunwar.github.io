@@ -42,7 +42,8 @@ body{
         font-size: 48pt; color: red;display: inline;
         vertical-align: top;
     }
-    .review-box{display: flex;
+    .review-box{
+        display: flex;
         flex-wrap: wrap;
         gap: 2%;
         padding: 2%;
