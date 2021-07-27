@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W2D1 - Form2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/webform2.css" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav id="mainNav" class="navbar navbar-expand-md navbar-dark mb-5">
+            <a class="navbar-brand" href="#">MUM Golden Dome Market ::: System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-divider mx-4"></li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-divider mx-4"></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Suppliers</a>
+                    </li>
+                </ul>
+                <span class="navbar-text mr-3">Hello!</span>
+                <button class="btn btn-light my-2 my-sm-0" type="button">Sign Out</button>
+
+            </div>
+        </nav>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <h3>New Product Form</h3>
+                <form class="mt-5" id="form2" onsubmit="onSubmit(event);">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="productNumber">Product Number</label>
+                                <input type="text" class="form-control" id="productNumber">
+                            </div>
+                            <div class="form-group">
+                                <label for="productName">Name</label>
+                                <input type="text" class="form-control" id="productName">
+                            </div>
+                            <div class="form-group">
+                                <label for="unitPrice">Unit Price</label>
+                                <input type="number" class="form-control" id="unitPrice" value="0.0" step="0.01">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="quantity">Quantity in stock</label>
+                                <input type="number" class="form-control" id="quantity" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="supplier">Supplier:</label>
+                                <select class="form-control" id="supplier">
+                                    <option value="" disabled selected>Select a supplier</option>
+                                    <option value="supplier1">Supplier1</option>
+                                    <option value="supplier2">Supplier2</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="supplierDate">Supplied Date</label>
+                                <input type="date" class="form-control" id="supplierDate"
+                                    aria-describedby="dateHelp">
+                                <small id="dateHelp" class="form-text text-muted">Enter a valid Date.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="offset-md-8 col-md-4">
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-outline-secondary btnReset" type="reset">Reset</button>
+                                <button class="btn btn-outline-danger btnCancel" type="button">Cancel</button>
+                                <button class="btn btn-outline-primary btnAdd" type="submit">Add Product</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        function onSubmit(e) {
+            e.preventDefault();
+            try {
+                let productNumber = document.getElementById('productNumber').value;
+                let productName = document.getElementById('productName').value;
+                let unitPrice = document.getElementById('unitPrice').value;
+                let quantity = document.getElementById('quantity').value;
+                let supplier = document.getElementById('supplier').value;
+                let suppliedDate = document.getElementById('supplierDate').value;
+
+                let productItem = "Form data:\n";
+                productItem += "Product Number : " + productNumber + "\n";
+                productItem += "Product Name           : " + productName + "\n";
+                productItem += "Unit Price     : " + unitPrice + "\n";
+                productItem += "Quantity       : " + quantity + "\n";
+                productItem += "Supplier       : " + supplier + "\n";
+                productItem += "Supplied Date  : " + suppliedDate + "\n";
+                alert(productItem);
+            }
+            catch (e) {
+                console.error(e);
+            }
+
+        }
+    </script>
+</body>
+
+</html>
