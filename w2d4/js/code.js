@@ -23,13 +23,13 @@ Person.prototype.initialize = function(name, age) {
 };
 
 Person.prototype.describe = function() {
- return this.name + ", " + this.age + " years old.";
+ return `${this.name}, ${this.age} years old.`;
 };
 
 Teacher = function() {};
 Teacher.prototype = new Person();
 Teacher.prototype.teach = function(subject) {
-    return this.name +" is now teaching "+ this.subject;
+    return `${this.name} is now teaching ${subject}`;
 }
 
 let teacher = new Teacher();
