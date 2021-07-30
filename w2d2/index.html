@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home - Gopal Kunwar Personal Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+
+        x = 1;//global scope
+
+        var a = 5;
+        var b = 10;
+        var c = function (a, b, c) {//8.9,10
+
+            //here x is undefined it hasn't taken the var x=10
+            //because it is not defined before it printed out
+            //if var x=10 is not defined then output of x is 1 i.e. takes the value from global scope
+            console.log(x);//output::undefined
+
+            console.log(a);//output:: 8
+            var f = function (a, b, c) {
+                b = a;//b=8
+                console.log(b);//output:: 8
+                b = c;//b=10
+                var x = 5;
+            }//finished the scope of a,b,c here
+            f(a, b, c);//f(8,9,10) takes value from outer scope
+            console.log(b);//output:: 9
+            var x = 10;
+        }
+
+        c(8, 9, 10);//function called first
+        console.log(b);//output:: 10 taken from outside the function scope
+        console.log(x);//output:: 1 taken from global scope
+
+        //output
+        //undefined
+        //8.9
+        //8.9
+        //9
+        //10
+        //1
+
+        console.log("Scope");
+        var x = 10;
+        function main() {
+            console.log("x1 is:" + x);
+            x = 20;
+            console.log("x2 is:" + x);
+            if (x > 0) {
+                var x = 30;
+                console.log("x3 is:" + x);
+            }
+            console.log("x4 is:" + x);
+            var x = 40;
+            var f = function (x) {
+                console.log("x5 is:" + x);
+            };
+            f(50);
+            console.log("x6 is:" + x);
+        }
+        main();
+        console.log("x7 is:" + x);
+
+        // Scope
+        // x1 is: undefined
+        // x2 is: 20
+        // x3 is: 30
+        // x4 is: 30
+        // x5 is: 50
+        // x6 is: 40
+        // x7 is: 10
+
+
+        function init() { //function declaration
+            const name = "Mozilla";
+            function displayName() {
+                console.log(name);
+            }
+            displayName();
+        }
+        init()
+
+        console.log("Quesion 4");
+        var x = 9;
+        function myFunction() {
+            return x * x;
+        }
+        console.log(myFunction());
+        x = 5;
+        console.log(myFunction());
+
+        console.log("Question 5");
+        var foo = 1;
+        function bar() {
+            if (!foo) {
+                var foo = 10;
+            }
+            alert(foo);
+        }
+        bar();
+
+        var x = 10;
+        function main() {
+            console.log("x1: " + x);//undefined
+            x = 20;
+            if (x > 0) {
+                var x = 30;
+                console.log("x2: " + x);
+            }
+            var x = 40;
+            var f = function (x) { console.log("x3: " + x); }
+            f(50);
+        }
+        main();
+
+        for (var i = 0; i < 10; i++) {
+            console.log("i inside for loop: " + i);
+        }
+        console.log(i); // 10
+        if (i > 5) {
+            var j = 3;
+        }
+        console.log("j OUTside block: " + j);
+
+
+        function test1() {
+            console.log(x); // consult Global for x and print 20 from Global
+        }
+        function test() {
+            var x = 10;
+            test1(); // consult Global for a
+        }
+        var x = 20;
+        test();
+
+
+        function test3() {
+            function test2() {
+                console.log(x);
+            }
+            var x = 10;
+            test2();
+        }
+        var x = 20;
+        test3();
+
+
+        function f() {
+            var a = 1, b = 20, c;
+            console.log(a + " " + b + " " + c);//1 20 undefined
+            function g() {
+                var b = 300, c = 4000;
+                console.log(a + " " + b + " " + c);
+                var a = a + b + c;
+                console.log(a + " " + b + " " + c);
+            }
+            console.log(a + " " + b + " " + c); //1 20 undefined
+            g();//1 300 4000   //4301 300 4000 
+            console.log(a + " " + b + " " + c); //4301 20 undefined
+        } 
+        f();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+
+</html>
