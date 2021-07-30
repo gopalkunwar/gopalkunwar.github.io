@@ -13,7 +13,7 @@ describe("bubbleSort", function () {
 });
 
 describe("teach", function () {
-    it("Returns the teacher name and her teaching course name",
+    it("Returns the teacher name and teaching course name",
         function () {
             let teacher = new Teacher();
             teacher.initialize("Andrew", 45);
