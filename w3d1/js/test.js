@@ -177,6 +177,7 @@
         });
     });
 
+
     describe("Bank", function () {
         beforeEach(() => {
             bank = new Bank();
@@ -184,30 +185,31 @@
 
         describe("addAccount", function () {
             it("adds an account, and returns number of accounts", function () {
-                bank.addAccount(12);
-                assert.equal(bank.addAccount(124), 2);
+                bank.addAccount(15);
+                assert.equal(bank.addAccount(224), 2);
             });
         });
 
         describe("addCheckingAccount", function () {
             it("adds a checking account, and returns number of accounts", function () {
-                assert.equal(bank.addCheckingAccount(1000, 123), 1);
+                assert.equal(bank.addCheckingAccount(1000, 125), 1);
             });
         });
 
         describe("addSavingsAccount", function () {
             it("adds a savings account, and returns number of accounts", function () {
-                assert.equal(bank.addSavingsAccount(0.02, 1243), 1);
+                assert.equal(bank.addSavingsAccount(0.04, 1234), 1);
             });
         });
 
         // describe("accountReport", function () {
         //     it("Prints details of each existing account", function () {
-        //         bank.addCheckingAccount(1000, 123);
-        //         bank.addAccount(124);
-        //         bank.addSavingsAccount(0.02, 1243);
-        //         assert.equal(bank.accountReport(), "Checking Account 123: balance 0: overdraft limit 1000\nAccount 124: balance 0\nSavings Account 1243: balance 0: intreset 0.02");
+        //         bank.addCheckingAccount(1000, 125);
+        //         bank.addAccount(224);
+        //         bank.addSavingsAccount(0.04, 1234);
+        //         assert.equal(bank.accountReport(), "Checking Account 125: balance 0: overdraft limit 1000\nAccount 224: balance 0\nSavings Account 1234: balance 0: intreset 0.04");
         //     });
         // });
+
     });
 })();
