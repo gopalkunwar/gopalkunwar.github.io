@@ -1,0 +1,40 @@
+body{
+    padding: 0;
+    margin: 0;font-size: 13px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 151px;
+    bottom: 25px;
+    position: absolute;
+    left: 40px;
+}
+form>label{margin-bottom: 5px;}
+form>input[type="text"]{
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.btnStart{    
+    background-color: #e12222;
+    color: #FFF;
+    padding: 5px;
+    border: 0;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle:hover {
+    opacity: 0.7;
+}
