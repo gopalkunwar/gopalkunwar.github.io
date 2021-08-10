@@ -1,0 +1,62 @@
+<%- include('header.ejs') %>
+
+    <div class="row">
+        <div class="cart_section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <div class="cart_container">
+                            <div class="row">
+                                <div class="cart_title col-md-6 text-start">Shopping Cart</div>
+                                <div class="cart_title col-md-6 text-end"><small> (<%=Object.keys(cartItems).length %> items in cart)
+                                    </small></div>
+                            </div>
+                            <div class="cart_items mt-3">
+                                <div class="row pt-3 pb-2 cart-heading">
+                                    <div class="col-md-3"></div>
+
+                                    <div class="col-md-3 text-center">Name</div>
+                                    <div class="col-md-3 text-center">Quantity</div>
+                                    <div class="col-md-3 text-center">Price</div>
+
+                                </div>
+
+                                <ul class="cart_list">
+                                    <%   for( let i of cartItems) {    %>                                                                                                 
+                                        <li class="cart_item clearfix">
+                                            <div
+                                                class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+                                                <div class="cart_item_name cart_info_col">
+                                                    <div class="cart_item_text">
+                                                        <img src="img/product.jpg" alt="product sample image" />
+                                                    </div>
+                                                </div>
+                                                <div class="cart_item_name cart_info_col">
+                                                    <div class="cart_item_text">
+                                                        <%= i.prodName %>
+                                                    </div>
+                                                </div>
+                                                <div class="cart_item_quantity cart_info_col">
+                                                    <div class="cart_item_text">
+                                                        <%= i.prodQty %>
+                                                    </div>
+                                                </div>
+                                                <div class="cart_item_price cart_info_col">
+                                                    <div class="cart_item_text">$<%= i.prodPrice %>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                        <% } %>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('footer.ejs') %>

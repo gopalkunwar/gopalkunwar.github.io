@@ -1,0 +1,41 @@
+<%- include('header.ejs') %>
+
+    <h3 class="text-center mt-5 pb-4 ">Available Products</h3>
+    <div class="container">
+        <div class="row">
+            <% for( let i in products) { %>
+
+                <div class="col-sm-3 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="img/product.jpg" alt="product sample image" />
+
+                            <h5 class="card-title pt-3">
+                                <%= products[i].product_name %>
+                            </h5>
+                            <p class="card-text">ID: <%= products[i].id %>
+                            </p>
+                            <p class="card-text"> Price: $<%= products[i].price %>
+                            </p>
+                            <p class="card-text"> Description:
+                                <%= products[i].desc %>
+                            </p>
+                            <form action="/addToCart" method="POST">
+                                <input type="hidden" name="prodName" value="<%=products[i].product_name %>">
+                                <input type="hidden" name="prodPrice" value="<%=products[i].price %>">
+
+                                <input type="submit" class="btn btn-primary" value="Add to Cart" />
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <% } %>
+
+                
+        </div>
+    </div>
+
+
+    <%- include('footer.ejs') %>
